@@ -1,0 +1,128 @@
+@import "colors";
+
+/* 
+  HELPER IN EDITOR
+  ----------------
+*/
+.wp-block-group.block-editor-block-list__block {
+  border: 1px solid rgb(104, 104, 104);
+}
+
+/* 
+  GENERALS
+  --------
+*/
+.wp-block {
+  max-width: 1440px !important;
+}
+
+.has-text-light-color {
+  color: $TEXT_COLOR_LIGHT;
+}
+
+.has-text-dark-color {
+  color: $TEXT_COLOR_DARK;
+}
+
+.has-accent-yellow-color {
+  color: $ACCENT;
+}
+
+
+/* 
+  HEADINGS
+  --------  
+*/
+.is-style-sunset-heading {
+  text-align: left;
+  width: 50%;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+
+  &.has-text-light-color {
+    color: $TEXT_COLOR_LIGHT;
+    border-bottom: 1px solid $TEXT_COLOR_LIGHT;
+  }
+
+  &.has-text-dark-color {
+    color: $TEXT_COLOR_DARK;
+    border-bottom: 1px solid $TEXT_COLOR_DARK;
+  }
+
+  &.has-accent-yellow-color {
+    color: $ACCENT;
+    border-bottom: 1px solid $ACCENT;
+  }
+
+  &.wp-block {
+    margin-left: 0
+  }
+}
+
+
+/* 
+  GROUPS
+  ------
+*/
+.is-style-sunset-about-us-section {
+  background-color: $SECONDARY;
+  color: $TEXT_COLOR_LIGHT;
+  padding: 50px auto;
+  position: relative;
+
+  &.has-text-light-color {
+    background-color: $TEXT_COLOR_LIGHT;
+    color: $TEXT_COLOR_DARK;
+  }
+
+  &.wp-block-group.block-editor-block-list__block {
+    margin-bottom: 100px;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 40%;
+    height: 80px;
+    position: absolute;
+    background-color: inherit;
+    bottom: -75px;
+    left: 0;
+    z-index: 0;
+  }
+}
+
+.is-style-sunset-wrapper {
+  width: 90%;
+  margin: 0 auto;
+  
+  @media screen and(min-width: 960px) {
+    max-width: 960px !important;
+  }
+}
+
+
+.is-style-sunset-quote-group {
+  position: relative;
+  
+  &::before {
+    content: "";
+    display: block;
+    left: 0;
+    top: -10px;
+    height: 50px;
+    width: 50px;
+    background-color: blue;
+  }
+}
+
+
+/*
+  IMAGES
+  ------
+*/
+
+.is-style-sunset-left-figcaption {
+  text-align: left;
+  color: inherit;
+}

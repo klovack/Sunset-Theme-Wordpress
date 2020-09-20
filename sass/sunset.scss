@@ -1,0 +1,135 @@
+/* 
+    @package sunsettheme
+*/
+
+/* 
+    GENERAL
+    -------
+*/
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
+}
+
+h5 {
+    font-size: 1rem;
+}
+
+.background-image {
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.text-shadow {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+/* 
+    ======
+    MIXINS
+    ======
+*/
+@mixin animate($attr, $time) {
+    -webkit-transition: $attr $time ease-in-out;
+    -moz-transition: $attr $time ease-in-out;
+    -o-transition: $attr $time ease-in-out;
+    transition: $attr $time ease-in-out;
+}
+
+@mixin transform($val) {
+    -webkit-transform: $val;
+    -moz-transform: $val;
+    -o-transform: $val;
+    transform: $val;
+}
+
+/* 
+    HEADER
+    ------
+*/
+.header-container {
+    position: relative;
+    display: block;
+    height: 300px;
+    width: 100%;
+
+    .header-content {
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        color: #ffffff;
+
+        .site-icon {
+            height: 100px;
+            width: auto;
+            margin-bottom: -20px;
+        }
+    }
+}
+
+
+.nav-container {
+    height: 20%;
+    
+    .navbar-sunset {
+        background-color: rgba(255, 255, 255, 0.08);
+        height: 100%;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        
+        li {
+            margin: auto 50px;
+            position: relative;
+
+            &.active {
+                a {
+                    opacity: 1;
+                    font-weight: bold;
+                }
+            }
+
+            a{
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
+                background: none;
+                opacity: .7;
+                color: #fff;
+                @include animate(opacity, 350ms);
+
+                &:hover,
+                &:focus,
+                &:visited {
+                    text-decoration: none;
+                    opacity: 1;
+                    font-weight: bold;
+                    background: none;
+
+                    &:after {
+                        opacity: 1;
+                        @include transform(translateY(0));
+                    }
+                }
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    display: block;
+                    opacity: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: -5px;
+                    height: 2px;
+                    background: #fff;
+                    @include animate(all, 350ms);
+                    @include transform(translateY(10px));
+                }
+            }
+        } 
+        
+    }
+}
+

@@ -1,0 +1,96 @@
+/* 
+  HELPER IN EDITOR
+  ----------------
+*/
+.wp-block-group.block-editor-block-list__block {
+  border: 1px solid #686868; }
+
+/* 
+  GENERALS
+  --------
+*/
+.wp-block {
+  max-width: 1440px !important; }
+
+.has-text-light-color {
+  color: #FFFFFF; }
+
+.has-text-dark-color {
+  color: #141414; }
+
+.has-accent-yellow-color {
+  color: #FFC508; }
+
+/* 
+  HEADINGS
+  --------  
+*/
+.is-style-sunset-heading {
+  text-align: left;
+  width: 50%;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem; }
+  .is-style-sunset-heading.has-text-light-color {
+    color: #FFFFFF;
+    border-bottom: 1px solid #FFFFFF; }
+  .is-style-sunset-heading.has-text-dark-color {
+    color: #141414;
+    border-bottom: 1px solid #141414; }
+  .is-style-sunset-heading.has-accent-yellow-color {
+    color: #FFC508;
+    border-bottom: 1px solid #FFC508; }
+  .is-style-sunset-heading.wp-block {
+    margin-left: 0; }
+
+/* 
+  GROUPS
+  ------
+*/
+.is-style-sunset-about-us-section {
+  background-color: #604635;
+  color: #FFFFFF;
+  padding: 50px auto;
+  position: relative; }
+  .is-style-sunset-about-us-section.has-text-light-color {
+    background-color: #FFFFFF;
+    color: #141414; }
+  .is-style-sunset-about-us-section.wp-block-group.block-editor-block-list__block {
+    margin-bottom: 100px; }
+  .is-style-sunset-about-us-section::before {
+    content: "";
+    display: block;
+    width: 40%;
+    height: 80px;
+    position: absolute;
+    background-color: inherit;
+    bottom: -75px;
+    left: 0;
+    z-index: 0; }
+
+.is-style-sunset-wrapper {
+  width: 90%;
+  margin: 0 auto; }
+  @media screen and (min-width: 960px) {
+    .is-style-sunset-wrapper {
+      max-width: 960px !important; } }
+
+.is-style-sunset-quote-group {
+  position: relative; }
+  .is-style-sunset-quote-group::before {
+    content: "";
+    display: block;
+    left: 0;
+    top: -10px;
+    height: 50px;
+    width: 50px;
+    background-color: blue; }
+
+/*
+  IMAGES
+  ------
+*/
+.is-style-sunset-left-figcaption {
+  text-align: left;
+  color: inherit; }
+
+/*# sourceMappingURL=blocks.css.map */

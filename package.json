@@ -1,0 +1,16 @@
+{
+  "name": "sunsettheme",
+  "version": "0.0.1",
+  "description": "Sunset theme with Gutenberg friendly editor",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:editor": "wp-scripts build js/blocks/*.js --output-path=js/blocks/out",
+    "watch:editor": "wp-scripts start js/blocks/*.js --output-path=js/blocks/out"
+  },
+  "author": "Muhammad Rizki Fikriansyah",
+  "license": "ISC",
+  "devDependencies": {
+    "@wordpress/scripts": "^12.2.0"
+  }
+}
